@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  inline-size: 100%;
+  padding: 20px;
+  background: #00427a;
+  font-size: 20px;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-transform: uppercase;
+}
+
+.logo {
+  inline-size: 30px;
+}

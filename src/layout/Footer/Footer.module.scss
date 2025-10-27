@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #d4d4d4;
+  padding: 10px;
+  .title {
+    font-size: 20px;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 10px;
+  .icon {
+    color: #00427a;
+    inline-size: 20px;
+  }
+}
+
+.title {
+  color: #00427a;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(53, 53, 53);
+}
+
+.icons {
+  inline-size: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  .icon {
+    color: #00427a;
+
+    inline-size: 30px;
+  }
+}
+
+.line {
+  inline-size: 100%;
+  border-bottom: 1px solid rgb(112, 112, 112);
+  text-wrap: wrap;
+}
+
+.copyright {
+  display: flex;
+  font-size: 13px;
+  justify-content: center;
+  gap: 5px;
+  color: rgb(61, 61, 61);
+}
