@@ -1,60 +1,107 @@
-import { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import styles from "./form.module.scss";
 
 const Form = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({
+    full_name: "",
+    email: "",
+    phone_number: "",
+    message: "",
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submissionSuccess, setSubmissionSuccess] = useState(null); // true | false
+  const [submissionSuccess, setSubmissionSuccess] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
-    try {
-      setIsSubmitting(true);
+    setIsSubmitting(true);
 
-      emailjs.sendForm(
-        'YOUR_SERVICE_ID', 
-        'YOUR_TEMPLATE_ID', 
-        e.target,
-        'YOUR_USER_ID'
-      ).then((res) => {
-        if(res.status === 200){
-          setSubmissionSuccess(true);
-        } else {
-          throw new Error("Something went wrong");
-        }
-      }).catch((err) => {
-        console.error(err);
+    emailjs
+      .send(
+        "service_1c9a5nh",
+        "template_gi49ubk",
+        formData,
+        "1kda-ZhvUJ74El36S"
+      )
+      .then((res) => {
+        console.log("SUCCESS!", res.status, res.text);
+        setSubmissionSuccess(true);
+        setFormData({
+          full_name: "",
+          email: "",
+          phone_number: "",
+          message: "",
+        });
+        setTimeout(() => setSubmissionSuccess(null), 3000);
+      })
+      .catch((err) => {
+        console.error("FAILED...", err);
         setSubmissionSuccess(false);
-      }).finally(() => {
-        setIsSubmitting(false);
-      });
-    } catch (err) {
-      console.error(err);
-      setSubmissionSuccess(false);
-    }
+        setTimeout(() => setSubmissionSuccess(null), 3000);
+      })
+      .finally(() => setIsSubmitting(false));
   };
 
   return (
-    <>
-      {submissionSuccess === null && (
-        <form onSubmit={sendEmail}>
-          <label htmlFor="name">Имя:</label><br />
-          <input type="text" id="name" name="from_name" value={name} onChange={(e) => setName(e.target.value)} required /><br />
-          
-          <label htmlFor="email">Email:</label><br />
-          <input type="email" id="email" name="reply_to" value={email} onChange={(e) => setEmail(e.target.value)} required /><br />
-          
-          <label htmlFor="message">Сообщение:</label><br />
-          <textarea id="message" name="message_html" rows="4" cols="50" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea><br />
-          
-          <button disabled={isSubmitting}>{isSubmitting ? 'Отправляем...' : 'Отправить'}</button>
-        </form>
-      )}
-      {submissionSuccess !== null && submissionSuccess && <p style={{ color: 'green' }}>Ваше сообщение успешно отправлено!</p>}
-      {submissionSuccess !== null && !submissionSuccess && <p style={{ color: 'red' }}>Ошибка отправки сообщения.</p>}
-    </>
+    <div className={styles.formWrapper}>
+      <form onSubmit={sendEmail} className={styles.form}>
+        <h2 className={styles.title}>Нужна констультация?</h2>
+        <p>Оставьте заявку и наш менеджер свяжется с вами в ближайшее время!</p>
+        <input
+          type="text"
+          id="full_name"
+          name="full_name"
+          value={formData.full_name}
+          onChange={handleChange}
+          placeholder="ФИО"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="Email"
+          required
+        />
+        <input
+          type="tel"
+          id="phone_number"
+          name="phone_number"
+          value={formData.phone_number}
+          onChange={handleChange}
+          placeholder="Телефон"
+          required
+        />
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          placeholder="Текст вашего сообщения"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "Отправляем..." : "Получить консультацию"}
+        </button>
+        {submissionSuccess === true && (
+          <p className={styles.success}>
+            ✅ Ваше сообщение успешно отправлено!
+          </p>
+        )}
+        {submissionSuccess === false && (
+          <p className={styles.error}>
+            ❌ Ошибка отправки сообщения. Попробуйте позже.
+          </p>
+        )}
+      </form>
+    </div>
   );
 };
 
