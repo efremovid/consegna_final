@@ -1,6 +1,8 @@
 .content {
+  background: #f5f5f5;
   display: grid;
   grid-template-rows: max-content 1fr max-content;
   block-size: 100%;
   min-block-size: 100dvh;
+  gap: 20px;
 }

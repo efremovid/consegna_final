@@ -1,0 +1,45 @@
+.container {
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.card_item {
+  display: grid;
+  grid-template-columns: 30px auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.image {
+  inline-size: 30px;
+  color: #00427a;
+}
+
+.title {
+  color: #00427a;
+  font-size: 20px;
+}
+
+.subtitle {
+  color: #00427a;
+  font-size: 18px;
+}
+
+.text {
+    text-align: justify;
+    hyphens: auto;           /* Включаем автоматический перенос слов */
+    word-spacing: normal;    /* Устанавливаем стандартное расстояние между словами */
+    letter-spacing: normal;
+}
