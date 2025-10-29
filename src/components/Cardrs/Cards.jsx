@@ -2,10 +2,18 @@ import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import Preloader from "../Preloader/Preloader";
 import styles from "./Cards.module.scss";
+import { FaArrowLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Cards = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [cards, setCards] = useState([]);
+
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate(-1);
+  };
 
   useEffect(() => {
     const fetchCards = () => {
@@ -22,7 +30,11 @@ const Cards = () => {
 
   return (
     <div className={styles.main}>
-      <button className={styles.back}>{"<-  Вернуться на главную"}</button>
+      <button onClick={handleGoBack} className={styles.back}>
+        <FaArrowLeft />
+        {"Вернуться на главную"}
+      </button>
+
       <h2 className={styles.title}>Актуальные объявления</h2>
       {isLoading ? (
         <Preloader />

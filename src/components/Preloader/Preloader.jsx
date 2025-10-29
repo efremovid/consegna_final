@@ -3,7 +3,7 @@ import styles from './Preloader.module.scss';
 
 const Preloader = ({ 
   height = 4, 
-  color = '#007bff', 
+  color = '#00427a', 
   duration = 1.5,
   className = '' 
 }) => {

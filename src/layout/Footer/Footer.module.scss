@@ -1,49 +1,30 @@
 .container {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background: #d4d4d4;
-  padding: 10px;
-  .title {
-    font-size: 20px;
-  }
+  color: #00427a;
+  background: #e1e1e1;
 }
 
-.item {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.contact {
+.main {
   display: grid;
-  grid-template-columns: 20px 1fr;
-  gap: 10px;
-  .icon {
-    color: #00427a;
-    inline-size: 20px;
-  }
+  grid-template-columns: 200px 1fr 200px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .title {
-  color: #00427a;
+  text-align: center;
+    font-size: 30px;
 }
 
 .link {
-  text-decoration: none;
-  color: rgb(53, 53, 53);
-}
-
-.icons {
-  inline-size: 100%;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  .icon {
-    color: #00427a;
-
-    inline-size: 30px;
-  }
+  color: #00427a;
 }
 
 .line {

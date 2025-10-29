@@ -10,8 +10,9 @@ const Card = ({ containerInfo }) => {
   return (
     <div className={styles.container}>
       <div className={styles.info}>
-        <p>Наименование: {containerInfo.name}</p>
-        <p>Стоимость: {containerInfo.price}</p>
+        <p><span>Наименование:</span>{" "}{containerInfo.name}</p>
+        <p><span>Локация:</span>{" "}{containerInfo.location}</p>
+        <p><span>Стоимость:</span>{" "}{containerInfo.price}</p>
       </div>
 
       {images.length > 0 ? (
