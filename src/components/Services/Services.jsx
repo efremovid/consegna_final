@@ -6,6 +6,7 @@ import { PiTruckTrailerFill } from "react-icons/pi";
 import { FaWarehouse } from "react-icons/fa";
 import { BiWorld } from "react-icons/bi";
 import { FaTruckMonster } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -32,6 +33,11 @@ const Services = () => {
             Осуществляем продажу б/у и новых контейнеров по выгодным ценам и
             различных условий оплаты по всей России и за ее пределами.
           </p>
+      <Link className={styles.cardBtn} to="/sale">
+        Посмотреть предложения
+      </Link>
+
+     
         </div>
         <div className={styles.card}>
           <div className={styles.card_item}>

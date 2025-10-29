@@ -1,0 +1,67 @@
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* можешь изменить под нужный размер контейнера */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #f3f3f3; /* чтобы при узких фото не было пустоты */
+}
+
+.slider-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 4 / 3; /* поддерживает пропорции как у большинства фото, но можно поменять */
+  background-color: #f3f3f3; /* фон для прозрачных/маленьких картинок */
+}
+
+.slider-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* сохраняет пропорции, не обрезает */
+  display: block;
+  margin: 0 auto;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Эффект при смене слайда (по желанию) */
+.slider-image.fade-enter {
+  opacity: 0;
+  transform: scale(0.98);
+}
+.slider-image.fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Кнопки навигации */
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  backdrop-filter: blur(3px);
+}
+
+.slider-button.left {
+  left: 15px;
+}
+
+.slider-button.right {
+  right: 15px;
+}
+
+.slider-button:hover {
+  background: rgba(0, 0, 0, 0.65);
+}
