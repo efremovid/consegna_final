@@ -10,22 +10,35 @@
   font-size: 20px;
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
 .card {
   display: grid;
   grid-template-columns: 20px 1fr;
   gap: 10px;
   align-items: center;
   background-color: white;
-  padding: 10px;
+  padding: 5px;
   border-radius: 10px;
+  font-size: 15px;
+  flex-basis: calc(100% / 4);
 }
 
 .image {
-  inline-size: 20px;
+  inline-size: 15px;
   color: #00427a;
 }
 
 .text {
   color: #464646;
-  font-size: 18px;
+}
+
+@media (width < 768px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
 }

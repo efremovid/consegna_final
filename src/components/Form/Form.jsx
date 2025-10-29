@@ -50,7 +50,7 @@ const Form = () => {
     <div className={styles.formWrapper}>
       <form onSubmit={sendEmail} className={styles.form}>
         <h2 className={styles.title}>Нужна констультация?</h2>
-        <p>Оставьте заявку и наш менеджер свяжется с вами в ближайшее время!</p>
+        <p className={styles.text}>Оставьте заявку и наш менеджер свяжется с вами в ближайшее время!</p>
         <input
           type="text"
           id="full_name"
@@ -87,7 +87,7 @@ const Form = () => {
           rows="5"
           required
         ></textarea>
-        <button type="submit" disabled={isSubmitting}>
+        <button className={styles.btn} type="submit" disabled={isSubmitting}>
           {isSubmitting ? "Отправляем..." : "Получить консультацию"}
         </button>
         {submissionSuccess === true && (

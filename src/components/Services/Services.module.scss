@@ -6,13 +6,19 @@
 }
 
 .card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  background: white;
+
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.cards {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background: white;
-  justify-content: center;
-  padding: 10px;
-  border-radius: 10px;
 }
 
 .card_item {
@@ -38,8 +44,8 @@
 }
 
 .text {
-    text-align: justify;
-    hyphens: auto;           /* Включаем автоматический перенос слов */
-    word-spacing: normal;    /* Устанавливаем стандартное расстояние между словами */
-    letter-spacing: normal;
+  text-align: justify;
+  hyphens: auto; /* Включаем автоматический перенос слов */
+  word-spacing: normal; /* Устанавливаем стандартное расстояние между словами */
+  letter-spacing: normal;
 }

@@ -1,0 +1,21 @@
+.title {
+  color: #00427a;
+  font-size: 20px;
+}
+
+.text {
+  color: #464646;
+  padding: 10px;
+  background-color: white;
+  font-size: 18px;
+  text-align: justify;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
