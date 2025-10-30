@@ -10,8 +10,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Contacts = () => {
-
-      const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleGoBack = () => {
     navigate(-1);
@@ -24,14 +23,15 @@ const Contacts = () => {
       </button>
       <h2 className={styles.title}>Контактная информация</h2>
       <div className={styles.card}>
-        <h3 className={styles.cardTitle}>Наши офисы</h3>
+        <h3 className={styles.cardTitle}>Наш офис</h3>
         <div className={styles.cardItem}>
           <IoNavigate className={styles.icon} />
-          <p>Казахстан, г. Астана, ул Достык 5/2, офис 4</p>
-        </div>
-        <div className={styles.cardItem}>
-          <IoNavigate className={styles.icon} />
-          <p>Россия, г. Можайск, ул Переяслав-Хмельницкого, д. 36, офис 7</p>
+          <a
+            target="_blank"
+            href="https://yandex.ru/maps/163/astana/house/dostyq_koshesi_5_2/Y0gYcgViT0UCQFtrfX1zeXpkZA==/?ll=71.422605%2C51.128671&utm_campaign=desktop&utm_medium=search&utm_source=maps&z=17"
+          >
+            <p>Казахстан, г. Астана, ул Достык 5/2, офис 4</p>
+          </a>
         </div>
       </div>
       <div className={styles.card}>
@@ -39,29 +39,19 @@ const Contacts = () => {
         <div className={styles.cardItem}>
           <FaPhone className={styles.icon} />
           <div>
-            <p>89123456978</p>
+            <a className={styles.link} href="tel:+77080080156">
+              +7 (708) 008-01-56
+            </a>
             <p className={styles.gray}>Основной номер</p>
           </div>
         </div>
         <div className={styles.cardItem}>
-          <FaPhone className={styles.icon} />
-          <div>
-            <p>89123456978</p>
-            <p className={styles.gray}>Вспомогательный номер</p>
-          </div>
-        </div>
-        <div className={styles.cardItem}>
           <MdEmail className={styles.icon} />
           <div>
-            <p>consegna-aka@rus.ru</p>
+            <a className={styles.link} href="mailto:equipment@tc-consegna.ru">
+              equipment@tc-consegna.ru
+            </a>
             <p className={styles.gray}>Основная почта</p>
-          </div>
-        </div>
-        <div className={styles.cardItem}>
-          <MdEmail className={styles.icon} />
-          <div>
-            <p>consegna-aka@rus.ru</p>
-            <p className={styles.gray}>Вспомогательная почта</p>
           </div>
         </div>
       </div>
@@ -76,14 +66,23 @@ const Contacts = () => {
             <IoLogoInstagram className={styles.icon} />
             <p>Instagram</p>
           </div>
-          <div className={styles.iconContainer}>
+          <a
+            target="_blank"
+            href="https://t.me/thereisnourflevel"
+            className={styles.iconContainer}
+          >
             <RiTelegram2Line className={styles.icon} />
             <p>Telegram</p>
-          </div>
-          <div className={styles.iconContainer}>
+          </a>
+
+          <a
+            className={styles.iconContainer}
+            target="_blank"
+            href="https://wa.me/+77080080156"
+          >
             <FaWhatsapp className={styles.icon} />
             <p>WhatsApp</p>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -91,5 +90,3 @@ const Contacts = () => {
 };
 
 export default Contacts;
-
-<MdEmail />;

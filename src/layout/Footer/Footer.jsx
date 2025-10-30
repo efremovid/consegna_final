@@ -14,14 +14,14 @@ const Footer = () => {
         <div className={styles.contacts}>
           <div className={styles.contact}>
             <FaPhone className={styles.icon} />
-            <a className={styles.link} href="tel:+79876543210">
-              +7 (987) 654-32-10
+            <a className={styles.link} href="tel:+77080080156">
+              +7 (708) 008-01-56
             </a>
           </div>
           <div className={styles.contact}>
             <IoMdMail className={styles.icon} />
-            <a className={styles.link} href="mailto:vash_email@yandex.ru">
-              vash_email@yandex.ru
+            <a className={styles.link} href="mailto:equipment@tc-consegna.ru">
+              equipment@tc-consegna.ru
             </a>
           </div>
         </div>
