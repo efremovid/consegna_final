@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTruck } from "react-icons/fa";
+import logo from "../../assets/mock"
 import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ const Header = () => {
     <div className={styles.container}>
       <div className={styles.titleContainer}>
         <h1 className={styles.title}>Consegna</h1>
-        <img className={styles.logo} src="/public/favicon.png" alt="" />
+        <img className={styles.logo} src={logo} alt="" />
       </div>
 
       <div className={styles.buttons}>

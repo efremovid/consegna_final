@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.scss";
+import logo from "../../assets/mock";
 import { FaPhone, FaRegCopyright, FaTruck } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
@@ -8,9 +9,8 @@ const Footer = () => {
     <div className={styles.main}>
       <div className={styles.container}>
         <div className={styles.titleContainer}>
-
           <h1 className={styles.title}>Consegna</h1>
-                  <img className={styles.logo} src="/public/favicon.png" alt="" />
+          <img className={styles.logo} src={logo} alt="" />
         </div>
 
         <div className={styles.contacts}>
@@ -38,5 +38,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
