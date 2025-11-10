@@ -23,7 +23,7 @@ const Services = () => {
             40HC, а также специализированное оборудование на максимально
             выгодных и гибких условиях.
           </p>
-          <a className={styles.cardBtn}>Перейти к КП OneWay</a>
+          <a target="_blank" href="https://docs.google.com/spreadsheets/d/1Q2Zh77KQ7Q_ADRQHoOsJb9jMWS_RpFjmLscFBCEI0YI/edit?gid=0#gid=0" className={styles.cardBtn}>Перейти к КП OneWay</a>
         </div>
         <div className={styles.card}>
           <div className={styles.card_item}>
