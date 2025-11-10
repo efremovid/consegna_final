@@ -18,19 +18,28 @@
   align-items: center;
   gap: 5px;
   inline-size: max-content;
-  color: #00427a;
+  color: #4f4f4f;
   padding: 5px;
-  border: 1px solid #00427a;
+  border: 1px solid #515151;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
 
 .back:hover {
   color: #ffffff;
-  background-color: #00427a;
+  background-color: #464646;
 }
 
 .title {
   font-size: 20px;
-  color: #00427a;
+  color: #464646;
+}
+
+.linkTo {
+ color: #464646;
+ font-size: 20px;
+}
+
+.linkTo:hover {
+  text-decoration: underline;
 }

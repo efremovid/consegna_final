@@ -2,40 +2,42 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  inline-size: 100%;
-  padding: 20px;
-  background-color: #00427a;
+  padding: 10px 20px;
+  background-color: #ffffff;
   font-size: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .titleContainer {
   display: flex;
   align-items: center;
   gap: 20px;
-  text-transform: uppercase;
 }
 
 .logo {
-  inline-size: 30px;
+  display: block;
+  inline-size: 70px;
   color: rgb(255, 255, 255);
 }
 
 .title {
-  color: #ffffff;
+  color: #424242;
   font-size: 30px;
+  text-transform: uppercase;
 }
 
 .buttons {
-display: flex;
-flex-direction: column;
-gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .btn {
+  inline-size: max-content;
   background: white;
-  color: #00427a;
+  color: #545454;
   padding: 5px;
-  border: 1px solid #ffffff;
+  border: 1px solid #565656;
   border-radius: 15px;
   transition: all 0.3s ease;
   font-size: 15px;
@@ -43,10 +45,8 @@ gap: 5px;
 
 .btn:hover {
   color: #ffffff;
-  background-color: #00427a;
+  background-color: #515151;
 }
-
-
 
 .cardBtn {
   inline-size: max-content;
@@ -61,4 +61,3 @@ gap: 5px;
   color: #ffffff;
   background-color: #00427a;
 }
-

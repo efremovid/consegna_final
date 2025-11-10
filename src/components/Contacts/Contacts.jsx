@@ -7,20 +7,16 @@ import { MdEmail } from "react-icons/md";
 import { IoLogoInstagram } from "react-icons/io5";
 import { RiTelegram2Line } from "react-icons/ri";
 import { FaWhatsapp } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Contacts = () => {
-  const navigate = useNavigate();
 
-  const handleGoBack = () => {
-    navigate(-1);
-  };
   return (
     <div className={styles.container}>
-      <button onClick={handleGoBack} className={styles.back}>
+      <Link to="/" className={styles.back}>
         <FaArrowLeft />
         {"Вернуться на главную"}
-      </button>
+      </Link>
       <h2 className={styles.title}>Контактная информация</h2>
       <div className={styles.card}>
         <h3 className={styles.cardTitle}>Наш офис</h3>

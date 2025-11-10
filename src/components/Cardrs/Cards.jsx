@@ -3,17 +3,11 @@ import Card from "../Card/Card";
 import Preloader from "../Preloader/Preloader";
 import styles from "./Cards.module.scss";
 import { FaArrowLeft } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Cards = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [cards, setCards] = useState([]);
-
-  const navigate = useNavigate();
-
-  const handleGoBack = () => {
-    navigate(-1);
-  };
 
   useEffect(() => {
     const fetchCards = () => {
@@ -30,10 +24,10 @@ const Cards = () => {
 
   return (
     <div className={styles.main}>
-      <button onClick={handleGoBack} className={styles.back}>
+      <Link to="/" className={styles.back}>
         <FaArrowLeft />
         {"Вернуться на главную"}
-      </button>
+      </Link>
 
       <h2 className={styles.title}>Актуальные объявления</h2>
       {isLoading ? (
@@ -47,6 +41,7 @@ const Cards = () => {
           ))}
         </div>
       )}
+      <p>Если вас заинтерсеовали наши предложения - <Link className={styles.linkTo} to="/form">перейдите к заполнению формы обратной связи!</Link> </p>
     </div>
   );
 };

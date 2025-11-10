@@ -23,16 +23,16 @@
 
 .cardBtn {
   inline-size: max-content;
-  color: #00427a;
+  color: #000000;
   padding: 5px;
-  border: 1px solid #00427a;
+  border: 1px solid #000000;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
 
 .cardBtn:hover {
   color: #ffffff;
-  background-color: #00427a;
+  background-color: #000000;
 }
 
 .card_item {
@@ -44,16 +44,16 @@
 
 .image {
   inline-size: 30px;
-  color: #00427a;
+  color: #000000;
 }
 
 .title {
-  color: #00427a;
+  color: #000000;
   font-size: 20px;
 }
 
 .subtitle {
-  color: #00427a;
+  color: #000000;
   font-size: 18px;
 }
 
@@ -62,4 +62,5 @@
   hyphens: auto; /* Включаем автоматический перенос слов */
   word-spacing: normal; /* Устанавливаем стандартное расстояние между словами */
   letter-spacing: normal;
+  color: #464646;
 }

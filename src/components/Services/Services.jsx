@@ -23,6 +23,7 @@ const Services = () => {
             40HC, а также специализированное оборудование на максимально
             выгодных и гибких условиях.
           </p>
+          <a className={styles.cardBtn}>Перейти к КП OneWay</a>
         </div>
         <div className={styles.card}>
           <div className={styles.card_item}>
@@ -33,11 +34,9 @@ const Services = () => {
             Осуществляем продажу б/у и новых контейнеров по выгодным ценам и
             различных условий оплаты по всей России и за ее пределами.
           </p>
-      <Link className={styles.cardBtn} to="/sale">
-        Посмотреть предложения
-      </Link>
-
-     
+          <Link className={styles.cardBtn} to="/sale">
+            Посмотреть предложения
+          </Link>
         </div>
         <div className={styles.card}>
           <div className={styles.card_item}>

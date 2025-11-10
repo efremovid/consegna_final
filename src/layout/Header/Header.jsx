@@ -7,14 +7,15 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.titleContainer}>
-        <FaTruck className={styles.logo} />
         <h1 className={styles.title}>Consegna</h1>
+        <img className={styles.logo} src="/public/favicon.png" alt="" />
       </div>
+
       <div className={styles.buttons}>
         <Link className={styles.btn} to="/contacts">
           Контакты
         </Link>
-        <button className={styles.btn}>Услуги</button>
+        {/* <button className={styles.btn}>Услуги</button> */}
       </div>
     </div>
   );

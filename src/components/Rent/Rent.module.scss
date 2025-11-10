@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  height: 100vh; /* блок на всю высоту экрана */
+  box-sizing: border-box;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  inline-size: max-content;
+  color: #00427a;
+  padding: 5px;
+  border: 1px solid #00427a;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #00427a;
+    color: white;
+  }
+}
+
+.imgcontainer {
+  flex: 1;                 /* занимает оставшееся пространство */
+  overflow-x: auto;        /* горизонтальный скролл */
+  overflow-y: hidden;      /* вертикальный скролл убираем */
+  height: 100%;
+  display: block;
+}
+
+.image {
+  height: 100%;            /* по высоте контейнера */
+  width: auto;             /* пропорции сохраняются */
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;          /* не позволяет сжиматься */
+  transform-origin: left center;
+}
